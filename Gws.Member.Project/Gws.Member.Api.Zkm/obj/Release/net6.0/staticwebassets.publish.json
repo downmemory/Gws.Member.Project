@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "X5A5w3+B7n05jvmvq5C6EneriB8+9vhuH/DfnAPe2Sk=",
+  "Source": "Gws.Member.Api.Zkm",
+  "BasePath": "_content/Gws.Member.Api.Zkm",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\source\\project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
+      "Version": 2,
+      "Source": "Gws.Common",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
