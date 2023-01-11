@@ -11,6 +11,7 @@ namespace Gws.Common.Services
             services.AddDI(Enums.ServiceScope.Scoped, "ITrackingService", "TrackingService");
             services.AddDI(Enums.ServiceScope.Scoped, "IMemberService", "MemberService");
             services.AddDI(Enums.ServiceScope.Scoped, "ILoggingService", "LoggingService");
+            //test
         }
     }
 }
