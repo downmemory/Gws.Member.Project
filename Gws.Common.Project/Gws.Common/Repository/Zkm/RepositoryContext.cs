@@ -12,6 +12,7 @@ namespace Gws.Common.Repository.Zkm
         public static void Initialize()
         {
             // string logDir = Path.Combine()
+            string test = "";
             string logFileName = "ZkmApi.log";
 
             _context = new ConcurrentDictionary<string, object>(StringComparer.OrdinalIgnoreCase);
