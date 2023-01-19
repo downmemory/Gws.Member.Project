@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <ProjectReference Include="C:\source\project\Gws.Common.Project\Gws.Common\Gws.Common.csproj" />
+    <ProjectReference Include="..\Gws.Common.Project\Gws.Common\Gws.Common.csproj" />
   </ItemGroup>
 
 </Project>
