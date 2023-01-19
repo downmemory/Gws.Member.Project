@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {}
+    "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {}
   },
   "projects": {
-    "C:\\source\\project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {
+    "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
+        "projectUniqueName": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
         "projectName": "Gws.Common",
-        "projectPath": "C:\\source\\project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
+        "projectPath": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
         "packagesPath": "C:\\Users\\SONG\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\project\\Gws.Common.Project\\Gws.Common\\obj\\",
+        "outputPath": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "MkdOsYB/1i/BtIsnyvcmk+FXxxxQ4l359dk/yJ0I/s4=",
+  "Hash": "CzsY+iWBInBdYrbsuKQIa8ZyHRkPXjfIYULh0KUNWj4=",
   "Source": "Gws.Member.Api.Zkm",
   "BasePath": "_content/Gws.Member.Api.Zkm",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\source\\project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
+      "Identity": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
       "Version": 2,
       "Source": "Gws.Common",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
