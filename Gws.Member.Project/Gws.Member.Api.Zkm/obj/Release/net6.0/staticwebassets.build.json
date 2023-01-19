@@ -7,7 +7,7 @@
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
+      "Identity": "..\\..\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
       "Version": 2,
       "Source": "Gws.Common",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

@@ -4,14 +4,14 @@
     "C:\\Source\\Project\\Gws.Member.Project\\Gws.Member.Api.Zkm\\Gws.Member.Api.Zkm.csproj": {}
   },
   "projects": {
-    "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {
+    "..\\..\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
+        "projectUniqueName": "..\\..\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
         "projectName": "Gws.Common",
-        "projectPath": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
+        "projectPath": "..\\..\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj",
         "packagesPath": "C:\\Users\\SONG\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\obj\\",
+        "outputPath": "..\\..\\Gws.Common.Project\\Gws.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

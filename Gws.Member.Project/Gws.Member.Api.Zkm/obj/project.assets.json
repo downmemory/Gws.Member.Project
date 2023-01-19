@@ -3392,8 +3392,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {
-              "projectPath": "C:\\Source\\Project\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj"
+            "..\\..\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj": {
+              "projectPath": "..\\..\\Gws.Common.Project\\Gws.Common\\Gws.Common.csproj"
             }
           }
         }
