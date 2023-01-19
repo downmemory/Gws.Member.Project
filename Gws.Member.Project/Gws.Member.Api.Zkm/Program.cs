@@ -52,7 +52,7 @@ app.UseEndpoints(endpoints =>
 //}
 
 // nginx 에서 사용시에 https 리디렉션을 제거 해야한다.
-//app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
