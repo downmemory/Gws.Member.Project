@@ -39,8 +39,12 @@ public class TrackingController : _ApiControllerBase
     [HttpGet("v1/where/{memberCode}")]
     public IActionResult Where(string memberCode) => this.CreateResult(GetWhere(memberCode));
 
-       [HttpGet("v1/tracking/{memberCode}")]
+    [HttpGet("v1/tracking/{memberCode}")]
     public IActionResult Trace(string memberCode) => this.CreateResult(GetTracking(memberCode));
+
+    [HttpGet("v1/test/{memberCode}")]
+    public IActionResult Test(string memberCode) => this.CreateResult(GetTracking(memberCode));
+
 
     private TrackingResultInfo GetTracking(string memberCode, string param1, string param2, string param3)
     {
