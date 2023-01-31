@@ -1,0 +1,92 @@
+import java.text.SimpleDateFormat
+
+
+pipeline {
+     environment {
+        String branchName = "main"
+        String git_url = "https://github.com/downmemory/Gws.Member.Project.git"
+        String credit = "repo-and-hook-access-token-credentials"
+        String bakPath = "var/www/"
+        //String gitTags = sh(retrunStdout: true, script: 'git describe --tags --abbrev=0').trim()
+        
+    }
+   
+    agent any
+    
+    stages{
+        stage("first"){
+            steps{
+                echo 'hi';
+            }
+            
+        }
+    }
+  
+}
+        // stage('Example') {
+        //     steps {
+        //         checkout([$class: 'GitSCM', 
+        //                   branches: [[name: "${params.TAG}"]], 
+        //                   doGenerateSubmoduleConfigurations: false, 
+        //                   extensions: [], 
+        //                   gitTool: 'Default', 
+        //                   submoduleCfg: [], 
+        //                   userRemoteConfigs: [[url: 'https://github.com/jenkinsci/git-parameter-plugin.git']]
+        //                 ])
+        //     }
+        // }
+     
+            
+        // stage('checkout') {
+        //         steps {
+        //             checkout([$class: 'GitSCM', branches: [[name: tagVersion]],
+        //                       userRemoteConfigs: [[url: 'ssh://git@repo',
+        //                                           credentialsId: 'my-user-id']]
+        //                     ])
+        //             }
+        //     }
+        
+        // stage('get date'){
+        //     steps{
+        //         script {
+        //             def dateFormat = new SimpleDateFormat("yyyyMMdd")
+        //             def date = new Date()
+                
+        //             today = dateFormat.format(date)                
+                    
+        //         }  
+        //     }
+        // }
+        // stage('backup'){
+        //     steps{
+        //         //jenkins server에 백업 생성 
+        //         //def bakFolder = 
+        //         echo "${bakPath}" + 'publish_' +  today);
+        //     }
+        // }
+        //  stage('github clone') {
+        //      steps {
+        //          git branch: "${branchName}", credentialsId: 'repo-and-hook-access-token-credentials', url: "${url}"
+        //      }
+        //  }
+        //  stage('restore'){
+        //      steps {
+        //          sh 'dotnet restore Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
+        //      }
+        //  }
+        //  stage('build'){
+        //      steps {
+        //          sh 'dotnet build --configuration Release Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
+        //      }
+        //  }
+        //  stage('publish'){
+        //      steps {
+        //          sh 'dotnet publish Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
+        //      }
+        //  }
+        //  stage('ssh publish'){
+        //      steps{
+        //          sshPublisher(publishers: [sshPublisherDesc(configName: 'WAS Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'su - root bash -c \'/var/www/web-restart-service.sh\'', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: './publish_20220117', remoteDirectorySDF: false, removePrefix: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish', sourceFiles: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+        //      }
+        //  }
+        
