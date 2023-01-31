@@ -32,7 +32,11 @@ pipeline {
         //                 ])
         //     }
         // }
-        echo '${params.TAG}'
+       stage('test'){
+            steps{
+                 echo '${params.TAG}'
+            }
+       }
     }
   
 }
