@@ -39,6 +39,26 @@ pipeline {
                         ])
             }
         }
+        stage('restore'){
+             steps {
+                 sh 'dotnet restore Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
+             }
+         }
+         stage('build'){
+             steps {
+                 sh 'dotnet build --configuration Release Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
+             }
+         }
+         stage('publish'){
+             steps {
+                 sh 'dotnet publish Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
+             }
+         }
+         stage('ssh publish'){
+             steps{
+                 sshPublisher(publishers: [sshPublisherDesc(configName: 'WAS Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'su - root bash -c \'/var/www/web-restart-service.sh\'', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: './publish_20220117', remoteDirectorySDF: false, removePrefix: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish', sourceFiles: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+             }
+         }
     }
   
 }
