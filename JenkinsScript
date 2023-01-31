@@ -13,25 +13,16 @@ pipeline {
    
     agent any
 
-     parameters {
-        gitParameter name: 'TAG',
-                     type: 'PT_TAG',
-                     defaultValue: 'main'
+    parameters {
+    gitParameter branchFilter: 'origin/main', defaultValue: '', name: 'TAG', type: 'PT_TAG'
     }
     
     stages {
-        stage('Example') {
-            steps {
-                checkout([$class: 'GitSCM',
-                          branches: [[name: "${params.TAG}"]],
-                          doGenerateSubmoduleConfigurations: false,
-                          extensions: [],
-                          gitTool: 'Default',
-                          submoduleCfg: [],
-                          userRemoteConfigs: [[url: 'https://github.com/downmemory/Gws.Member.Project.git']]
-                        ])
+       stage('test'){
+            steps{
+                 echo '${params.TAG}'
             }
-        }
+       }
     }
   
 }
