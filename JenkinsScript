@@ -13,11 +13,14 @@ pipeline {
    
     agent any
 
+    parameters {
+    gitParameter branchFilter: 'origin/main', defaultValue: '', name: 'TAG', type: 'PT_TAG'
+    }
     
     stages {
        stage('test'){
             steps{
-                 echo '${TAG}'
+                 echo '${params.TAG}'
             }
        }
     }
