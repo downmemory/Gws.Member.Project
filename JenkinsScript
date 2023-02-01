@@ -19,7 +19,6 @@ pipeline {
                      defaultValue: 'master'
     }
     
-    
     stages {
        stage('test'){
             steps{
@@ -30,7 +29,7 @@ pipeline {
        stage('checkout') {
             steps {
                 checkout([$class: 'GitSCM', 
-                          branches: [[name: "${params.TAG}"]], 
+                          branches: [[name: "refs/tags/${params.TAG}"]], 
                           doGenerateSubmoduleConfigurations: false, 
                           extensions: [], 
                           gitTool: 'Default', 
@@ -39,6 +38,11 @@ pipeline {
                         ])
             }
         }
+        stage('branch'){
+            steps {
+                  git branch: "${branchName}", credentialsId: 'repo-and-hook-access-token-credentials', url: "${url}"
+                 }
+            }
         stage('restore'){
              steps {
                  sh 'dotnet restore Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
