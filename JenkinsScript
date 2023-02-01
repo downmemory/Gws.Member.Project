@@ -38,11 +38,6 @@ pipeline {
                         ])
             }
         }
-        stage('branch'){
-            steps {
-                  git branch: "${branchName}", credentialsId: 'repo-and-hook-access-token-credentials', url: "${url}"
-                 }
-            }
         stage('restore'){
              steps {
                  sh 'dotnet restore Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
