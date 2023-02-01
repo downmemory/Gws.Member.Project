@@ -48,6 +48,9 @@ public class TrackingController : _ApiControllerBase
      [HttpGet("v1/test3/{memberCode}")]
     public IActionResult Test3(string memberCode) => this.CreateResult(GetWhere(memberCode));
 
+      [HttpGet("v1/test4/{memberCode}")]
+    public IActionResult Test4(string memberCode) => this.CreateResult(GetWhere(memberCode));
+
     private TrackingResultInfo GetTracking(string memberCode, string param1, string param2, string param3)
     {
         TrackingResultInfo retVal = null;
