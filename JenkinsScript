@@ -22,7 +22,7 @@ pipeline {
     stages {
        stage('test'){
             steps{
-                 echo '20230201'
+                 echo '20230201_테스트_첫번째_Test3_controller_추가'
                  echo "${params.TAG}"
             }
        }
@@ -50,12 +50,35 @@ pipeline {
          }
          stage('publish'){
              steps {
-                 sh 'dotnet publish Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
+                 sh 'dotnet publish  Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
              }
          }
          stage('ssh publish'){
              steps{
-                 sshPublisher(publishers: [sshPublisherDesc(configName: 'WAS Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'su - root bash -c \'/var/www/web-restart-service.sh\'', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: './publish_20230201', remoteDirectorySDF: false, removePrefix: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish', sourceFiles: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                 sshPublisher(
+                    publishers: [
+                        sshPublisherDesc(
+                            configName: 'WAS Server', 
+                            transfers: [
+                                sshTransfer(
+                                    cleanRemote: false, 
+                                    excludes: '', 
+                                    execCommand: 'su - root bash -c \'/var/www/web-restart-service.sh\'', 
+                                    execTimeout: 120000, 
+                                    flatten: false, 
+                                    makeEmptyDirs: true, 
+                                    noDefaultExcludes: false, 
+                                    patternSeparator: '[, ]+', 
+                                    remoteDirectory: './publish_20230201_create', 
+                                    remoteDirectorySDF: false, 
+                                    removePrefix: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish', 
+                                    sourceFiles: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish/**')
+                                       ], 
+                                    usePromotionTimestamp: false, 
+                                    useWorkspaceInPromotion: false, 
+                                    verbose: false)
+                                ]
+                            )
              }
          }
     }
