@@ -23,7 +23,7 @@ pipeline {
     stages {
        stage('test'){
             steps{
-                 echo '20230131_2'
+                 echo '20230201'
                  echo "${params.TAG}"
             }
        }
