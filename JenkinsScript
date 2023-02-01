@@ -53,11 +53,11 @@ pipeline {
                  sh 'dotnet publish Gws.Member.Project/Gws.Member.Api.Zkm/Gws.Member.Api.Zkm.csproj'
              }
          }
-        //  stage('ssh publish'){
-        //      steps{
-        //          sshPublisher(publishers: [sshPublisherDesc(configName: 'WAS Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'su - root bash -c \'/var/www/web-restart-service.sh\'', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: './publish_20220117', remoteDirectorySDF: false, removePrefix: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish', sourceFiles: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
-        //      }
-        //  }
+         stage('ssh publish'){
+             steps{
+                 sshPublisher(publishers: [sshPublisherDesc(configName: 'WAS Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'su - root bash -c \'/var/www/web-restart-service.sh\'', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: './publish_20220117', remoteDirectorySDF: false, removePrefix: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish', sourceFiles: 'Gws.Member.Project/Gws.Member.Api.Zkm/bin/Release/net6.0/publish/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+             }
+         }
     }
   
 }
